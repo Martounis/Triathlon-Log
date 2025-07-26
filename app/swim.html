@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swim Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">🏠 Home</a>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <h1>Swim Training</h1>
+  </header>
+  <main>
+    <form id="log-form" onsubmit="saveLog('swim'); return false;">
+      <input type="date" name="date" required>
+      <input type="text" name="distance" placeholder="Distance" required>
+      <input type="text" name="time" placeholder="Time" required>
+      <textarea name="notes" placeholder="Notes"></textarea>
+      <button type="submit">Add</button>
+    </form>
+    <div id="log-container"></div>
+  </main>
+  <script src="script.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => displayLogs('swim'));</script>
+</body>
+</html>
